@@ -4,12 +4,21 @@ import ConteoContext from './../context/ConteoContext'
 export default function Main() {
 
     const ctx = useContext(ConteoContext)
+    const { conteoFE, sumarNumero } = ctx
 
-    console.log(ctx)
+
+    const manejarClick = (event) => {
+        event.preventDefault()
+    
+        // Ejecutar función propia de context
+        sumarNumero()
+    }
+
 
     return (
         <div>
-                Desde Main, el valor que está en el Sol es: {ctx.conteoFE}
+                <p>Componente Main: {conteoFE}</p>
+                <button onClick={(e) => manejarClick(e)}>Sumar +1</button>
         </div>
     )
 }

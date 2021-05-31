@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <div>
-            El valor que está en el Sol es: {ctx.conteoFE}
+            Componente header: {ctx.conteoFE}
         </div>
     )
 }
