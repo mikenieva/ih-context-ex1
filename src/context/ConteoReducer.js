@@ -17,6 +17,12 @@ export default (state, action) => {
                 ...state,
                 conteo: action.payload
             }
+        
+        case "RESTAR_UNO":
+            return {
+                ...state,
+                conteo: action.payload
+            }
 
         default: 
             return state

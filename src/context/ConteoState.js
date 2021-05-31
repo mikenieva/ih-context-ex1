@@ -27,6 +27,16 @@ const ConteoState = (props) => {
         })
     }
 
+    const restarNumero = () => {
+        const nuevoNumero = state.conteo - 1
+
+        dispatch({
+            type: "RESTAR_UNO",
+            payload: nuevoNumero
+        })
+
+    }
+
     // D. RETORNO
 
     return (
@@ -35,7 +45,8 @@ const ConteoState = (props) => {
                 {
                     conteoFE: state.conteo,
                     usuarioFE: state.usuario,
-                    sumarNumero
+                    sumarNumero,
+                    restarNumero
                 }
             }
         >
