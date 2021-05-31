@@ -23,9 +23,15 @@ const ConteoState = (props) => {
     // C. FUNCIONES PROPIAS
 
     const sumarNumero = () => {
-        console.log("Hola mundo")
+        const newNumber = state.conteo + 1
         // const numeroNuevo = state.conteo + 1 
         // console.log(numeroNuevo)
+
+        dispatch({
+            type: 'SUMAR_UNO',
+            payload: newNumber
+        })
+
     }
 
     // D. RETORNO
@@ -35,7 +41,8 @@ const ConteoState = (props) => {
             value={
                 {
                     conteoFE: state.conteo,
-                    usuarioFE: state.usuario
+                    usuarioFE: state.usuario,
+                    sumarNumero
                 }
             }
         >
